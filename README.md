@@ -7,7 +7,6 @@
 - Run 'test_LAsegmentation_with_cross_validation.py' to segment the test dataset with the trained net at each fold.
 - Run 'metrics_test.py' to compute the metrics, such as the volumetric Dice score, the Precision, and the Recall of the test set for each fold.
 
-![Overview of Workflow](https://github.com/BioEngineeringFTGM/SegLA/blob/main/Graphical_Abstract.png)   
 
 ### read_and_write_cross_validation_scheme.py
 Input: a .csv file with a table containing "Training", "Validation", or "Test" for each patient depending on the current fold (for the first implementation of this framework, this .csv file is "UNet_all_phases_LAA_db.csv"). This script is for balancing the dataset, thus guaranteeing that at the end of the five folds the 10 phases of the CTs gated are equally processed by the UNet (there's no imbalance, such as 10 cases of 60% and 90 of 40%). The csv files is compiled upstreamly depending on the nummber and tha characteristics of the dataset.
